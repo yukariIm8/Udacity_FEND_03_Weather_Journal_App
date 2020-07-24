@@ -1,6 +1,6 @@
 // Global Variables
 const baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey = '&appid=76f0d1944e34bdf55a5bc9afa7ca8345';
+const apiKey = '&appid=76f0d1944e34bdf55a5bc9afa7ca8345&units=imperial';
 
 
 // Create a new date instance dynamically with JS
@@ -48,7 +48,7 @@ const updateUI = async () => {
 
   try {
       const data = await request.json();
-      const parent = document.querySelector('#entry-holder');
+      const parent = document.getElementById('entry-holder');
       parent.setAttribute('class', 'entry');
 
       while(parent.firstChild){
@@ -86,7 +86,7 @@ const populateHistory = async () => {
 
   try {
       const data = await request.json();
-      const parent = document.querySelector('#history-list');
+      const parent = document.getElementById('history-list');
 
       while(parent.firstChild){
         parent.removeChild(parent.firstChild);
@@ -122,17 +122,20 @@ const populateHistory = async () => {
 
 
 // Add event listner to the generate button.
-document.querySelector('#generate').addEventListener('click', performAction);
+document.getElementById('generate').addEventListener('click', performAction);
 
 function performAction(e) {
-    const zip = document.querySelector('#zip').value;
-    const feelings = document.querySelector('#feelings').value;
+    const zip = document.getElementById('zip').value;
+    if (!zip) {
+      alert('Zip Code is required.');
+    }
+    const feelings = document.getElementById('feelings').value;
     getWeather(baseURL,zip,apiKey)  // GET all the weather data
     .then(function(data) {          // POST some data to the app
         postWeather('/add', {
             place: data.name,
             date: newDate,
-            temperature: Math.ceil((data.main.temp - 273.15) * 9/5 + 32),
+            temperature: Math.ceil(data.main.temp),
             icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
             description: data.weather[0].description,
             feelings: feelings,
@@ -144,7 +147,7 @@ function performAction(e) {
 
 
 // Show the pagetop button when the user scrolls down 100px from the top of the document 
-const pageTopButton = document.querySelector('#page-top');
+const pageTopButton = document.getElementById('page-top');
 
 const showButton = () => {
   let y = window.scrollY;
