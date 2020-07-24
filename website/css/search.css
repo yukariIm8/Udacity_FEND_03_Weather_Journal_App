@@ -1,0 +1,273 @@
+/* Mobile Portrait Orientation: Galaxy Fold, iPhone 5/SE*/
+/* Mobile Portrait Orientation */
+/* Mobile Landscape Orientation */
+@media screen and (min-width: 280px) and (max-width: 899px) {
+    .holder {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    /*  Basic Styling To Override Default For Basic HTML Elements */
+    label{
+        display: block;
+        padding-bottom: 2px;
+        font-size: 1.5rem;
+    }
+
+
+    .note {
+        padding-left: 10px;
+        vertical-align: baseline;
+        font-size: 1.2rem;
+        color: #f30;
+    }
+
+
+    input{
+        display: block;
+        width: 10em;
+        height: 2em;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: none;
+        background:#eef;
+        color: #f30;
+        font-size: 1.5rem;
+        font-family: 'Oswald', sans-serif;
+    }
+
+
+    textarea{
+        vertical-align: top;
+        width: 12em;
+        height: 2em;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: none;
+        background:#eef;
+        color: #f30;
+        font-size: 1.5rem;
+        font-family: 'Oswald', sans-serif;
+    }
+
+
+    button{
+        width: 4em;
+        height: 2.3em;
+        border-radius: 2px;
+        border: none;
+        background: #000;
+        color: #fff;
+        font-size: 1.3rem;
+        font-family: 'Oswald', sans-serif;
+    }
+
+
+    button:hover {
+        background: #f30;
+    }
+
+
+    /* Reset style for HTML element on active to have no border */
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
+
+
+    /* Style for Placeholder Text */
+    ::placeholder { /* Firefox, Chrome, Opera */
+        color: #f30;
+        font-family: 'Oswald', sans-serif;
+        line-height: 3rem;
+    }
+
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #f30;
+        font-family: 'Oswald', sans-serif;
+    }
+
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: #f30;
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+
+/* Mobile Portrait Orientation: Galaxy Fold, iPhone 5/SE*/
+/* Mobile Portrait Orientation */
+@media screen and (min-width: 280px) and (max-width: 450px) {
+    .search-container {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: minmax(20px, auto) minmax(20px, auto);
+        padding: 0 12px 0 12px;
+        margin-top: 6.5em;
+    }
+
+
+    .zip {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+
+    .search-sub-container {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+
+/* Mobile Landscape Orientation */
+@media screen and (min-width: 451px) and (max-width: 899px) {
+    .search-container {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 6em;
+        padding: 0 12px 0 12px;
+    }
+
+
+    .zip {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+
+    .search-sub-container {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+
+/* Tablet and PC */
+@media screen and (min-width: 900px) {
+    .search-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-bottom: 10px;
+    }
+
+
+    .search-sub-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+
+    .holder {
+        margin-right: 10px;
+    }
+
+
+    /*  Basic Styling To Override Default For Basic HTML Elements */
+    label {
+        display: block;
+        padding-bottom: 2px;
+        font-size: 1.5rem;
+    }
+
+
+    .note {
+        vertical-align: baseline;
+        padding-left: 10px;
+        font-size: 1.2rem;
+        color: #f30;
+    }
+
+
+    input{
+        display: block;
+        width: 10em;
+        height: 2em;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: none;
+        background:#eef;
+        color: #f30;
+        font-size: 1.5rem;
+        font-family: 'Oswald', sans-serif;
+
+    }
+
+    textarea{
+        vertical-align: top;
+        width: 20em;
+        height: 2em;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: none;
+        background:#eef;
+        color: #f30;
+        font-size: 1.5rem;
+        font-family: 'Oswald', sans-serif;
+    }
+
+
+    button {
+        width: 4em;
+        height: 2.3em;
+        border-radius: 2px;
+        border: none;
+        background: #000;
+        color: #fff;
+        font-size: 1.3rem;
+        font-family: 'Oswald', sans-serif;
+    }
+
+
+    button:hover {
+        background: #f30;
+    }
+
+
+    /* Reset style for HTML element on active to have no border*/
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
+
+
+    /* Style for Placeholder Text*/
+    ::placeholder { /* Firefox, Chrome, Opera */
+        color: #f30;
+        font-family: 'Oswald', sans-serif;
+        line-height: 3rem;
+    }
+
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #f30;
+        font-family: 'Oswald', sans-serif;
+    }
+
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: #f30;
+        font-family: 'Oswald', sans-serif;
+    }
+}

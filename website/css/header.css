@@ -1,0 +1,46 @@
+.app-name {
+    font-size: 2rem;
+}
+
+
+/* Mobile Portrait Orientation: Galaxy Fold, iPhone 5/SE*/
+/* Mobile portrait orientation */
+/* Mobile Landscape Orientation */
+@media screen and (min-width: 280px) and (max-width: 899px) {
+    .app-title-container {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        padding: 2px 0 2px 0;
+        background-color: #fff;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+}
+
+
+/* Tablet and PC */
+@media screen and (min-width: 900px) {
+    header {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
+        padding: 2px 0 2px 0;
+        background-color: #fff;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+
+    .app-title-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
