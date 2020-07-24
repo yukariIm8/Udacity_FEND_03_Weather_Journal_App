@@ -1,5 +1,6 @@
 // Setup empty JS object to act as endpoint for all routes
 projectData = {};
+let history = [];
 
 // Require Express to run server and routes
 const express = require('express');
@@ -29,22 +30,33 @@ function listening() {
     console.log(`Server is running on local host: ${port}`);
 };
 
-// POST route
+// POST route for current weather data
 app.post('/add', postData);
 
 function postData(request, response) {
     projectData = {
-        temperature: request.body.temperature,
+        place: request.body.place,
         date: request.body.date,
+        temperature: request.body.temperature,
+        icon: request.body.icon,
+        description: request.body.description,
         feelings: request.body.feelings,
     };
+    history.push(projectData);
     response.send(projectData);
     console.log(projectData);
 };
 
-// GET route
+// GET route for current weather data
 app.get('/all', getData);
 
 function getData(request, response) {
     response.send(projectData);
+};
+
+// GET route for historical data
+app.get('/history', getHistory);
+
+function getHistory(request, response) {
+    response.send(history);
 };
