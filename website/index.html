@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Weather Journal</title>
-<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
- <body>
-<div id = "app">
-  <div class ="holder headline">
-    Weather Journal App
-  </div>
-  <div class ="holder zip">
-    <label for="zip">Enter Zipcode here</label>
-    <input type="text" id="zip" placeholder="enter zip code here">
-  </div>
-  <div class ="holder feel">
-    <label for="feelings">How are you feeling today?</label>
-    <textarea class= "myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
-    <button id="generate" type = "submit"> Generate </button>
-  </div>
-  <div class ="holder entry">
-    <div class = "title">Most Recent Entry</div>
-    <div id = "entryHolder">
-      <div id = "date"></div> 
-      <div id = "temp"></div>
-      <div id = "content"></div>
-  </div>
-  </div>
-  </div>
-<script src="app.js" type="text/javascript"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Yukari Im Weather Journal">
+    <meta name="keyword" content="Weather, Journal, by Zip Code, United States">
+    <meta name="author" content="Yukari Im">
+    <title>Weather Journal</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
 
-</body>
+  <body>
+    <div id="app-container">
+
+      <header>
+        <div class="app-title-container">
+          <img src="./image/icons8-thermometer-48.png" alt="thermometer-icon">
+          <div class ="app-name">Weather Journal App</div>
+        </div>
+        <div class="search-container">
+          <div class ="zip holder">
+              <label for="zip">Zipcode<span class="note"> United States only</span></label>
+              <input id="zip" type="text" placeholder="e.g., 94303">
+          </div>
+          <div class="search-sub-container">
+            <div class ="feel holder">
+              <label for="feelings">How are you feeling today?</label>
+              <textarea id="feelings" placeholder="Enter your feelings here" rows="1" cols="40" maxlength="65"></textarea>
+            </div>
+            <button id="generate" class="holder" type="submit">Generate</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="most-recent-entry">
+        <h1 class="recent-entry-headline">Most Recent Entry</h1>
+        <div id="entry-holder"></div>
+      </section>
+
+      <section class="history">
+        <h1>History</h1>
+        <div class="past-entry">
+          <ul id="history-list"></ul>
+        </div>
+      </section>
+
+      <a href="" id ="page-top" class="top-button hide">TOP</a>
+
+      <footer class="footer">
+        <p class="footer-text">&#9400;Yukari Im</p>
+        <a class="link-text" target="_blank" href="https://icons8.com/icons/set/thermometer">
+          Thermometer icon
+        </a>icon by <a class="link-text" target="_blank" href="https://icons8.com">Icons8</a>
+      </footer>
+
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
