@@ -1,4 +1,5 @@
 # Weather-Journal App Project
+![Weather Journal App](./website/image/app-design.JPG?raw=true "Weather Journal App")
 
 ## Overview
 This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
