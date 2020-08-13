@@ -39,7 +39,7 @@ Signing up will get you a API key.
 
 
 ### Step 3: Declare your a API key
-- Declare your API keys in app.js.
+- Declare your API key in app.js.
 
 
 ### Step 4: Running the Server
