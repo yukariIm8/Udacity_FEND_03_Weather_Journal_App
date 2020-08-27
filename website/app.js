@@ -1,5 +1,5 @@
 // Global Variables
-const baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
+const baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
 const apiKey = '&appid=76f0d1944e34bdf55a5bc9afa7ca8345&units=imperial';
 
 
