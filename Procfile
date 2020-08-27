@@ -1,1 +1,1 @@
-web: node server.jsheroku logs --tail
+web: node server.js
