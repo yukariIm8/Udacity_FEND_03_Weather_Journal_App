@@ -49,4 +49,4 @@ npm start
 ```
 
 ### Step 5: Accessing to localhost
-- Access `localhost:8080`, and try the app!
+- Access `localhost:8000`, and try the app!
